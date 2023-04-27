@@ -1,10 +1,14 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
+import About from '../components/About'
 
 const Home = () => {
   return (
-    <main>  
-      <NavBar />
+    <main>
+      <Hero />
+      <Header />
+      <About />
     </main> 
   )
 }
