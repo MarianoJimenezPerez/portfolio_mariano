@@ -1,0 +1,45 @@
+@import "./../base/variables";
+.projects {
+  .projects__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    @media screen and (max-width: $medium-screen) {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+    @media screen and (max-width: $small-screen) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .portfolio__item {
+      background: linear-gradient(
+        45deg,
+        transparent,
+        $color-bg-secondary,
+        transparent
+      );
+      padding: 1.3rem;
+      border-radius: 2rem;
+      border: 1px solid $color-bg-secondary;
+      transition: $transition;
+      .portfolio__item__image {
+        border-radius: 1.5rem;
+        overflow: hidden;
+      }
+      h3 {
+        margin: 1.2rem 0 2rem;
+        color: $color-white;
+      }
+      .portfolio__item__cta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .portfolio__item:hover {
+      border-color: $color-secondary;
+      background: transparent;
+    }
+  }
+}

@@ -18,7 +18,7 @@ const Header = () => {
         <a href="#about" onClick={() => setActiveNav("#about")} className={activeNav === '#about' ? 'active' : ''}>
           <AiOutlineUser />
         </a>
-        <a href="#technologies" onClick={() => setActiveNav("#technologies")} className={activeNav === '#technologies' ? 'active' : ''}>
+        <a href="#skills" onClick={() => setActiveNav("#skills")} className={activeNav === '#skills' ? 'active' : ''}>
           <BsCodeSlash />
         </a>
         <a href="#projects" onClick={() => setActiveNav("#projects")} className={activeNav === '#projects' ? 'active' : ''}>

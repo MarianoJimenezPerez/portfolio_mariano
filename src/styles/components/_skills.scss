@@ -1,0 +1,68 @@
+@import "./../base/variables";
+.skills {
+  .skills__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    transform: rotate(-5deg);
+    @media screen and (max-width: $medium-screen) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: $small-screen) {
+      gap: 1rem;
+    }
+    .skills__frontend,
+    .skills__backend {
+      background-color: transparent;
+      padding: 2.4rem 5rem;
+      border-radius: 2rem;
+      border: 1px solid $color-primary;
+      transition: $transition;
+      @media screen and (max-width: $medium-screen) {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: $small-screen) {
+        width: 100%;
+        padding: 2rem 1rem;
+      }
+      h3 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: $color-white;
+      }
+      .skills__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+        @media screen and (max-width: $medium-screen) {
+          padding: 1rem;
+        }
+        .skills__details {
+          display: flex;
+          gap: 1rem;
+          div {
+            h4 {
+              color: $color-white;
+            }
+            small {
+                color: $color-secondary;
+            }
+          }
+
+          .skills__details__icon {
+            margin-top: 6px;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    .skills__frontend:hover,
+    .skills__backend:hover {
+      border-color: $color-highlight;
+      cursor: default;
+      transform: rotate(5deg);
+    }
+  }
+}

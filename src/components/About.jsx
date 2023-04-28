@@ -32,7 +32,7 @@ const About = () => {
               <small>1+ Years working</small>
             </article>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis omnis cumque enim suscipit pariatur quam facere quos exercitationem ullam soluta error impedit iusto quae aliquam, libero voluptatem animi iure earum nesciunt similique illum. Enim, doloremque eaque! Quas maxime ut nesciunt, natus laudantium maiores, neque debitis et consectetur, magni doloribus eveniet.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium impedit nisi labore, quod quas omnis dolorum, quam autem nobis perferendis quo! Sequi, et dolorem natus impedit quidem aut autem, magnam assumenda voluptas aliquam amet officiis necessitatibus? Similique esse obcaecati tenetur aliquam dolore officia nulla magnam, molestias minima, ipsum culpa earum. Quasi delectus nemo molestias quam illo error sunt tempora? Libero molestias repudiandae quis facilis, quas aperiam magni esse quaerat explicabo!</p>
           <a href="#contact" className='btn btn__primary'>Contact</a>
         </div>
       </div>

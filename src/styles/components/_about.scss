@@ -9,9 +9,6 @@
       grid-template-columns: 1fr;
       gap: 0;
     }
-    @media screen and (max-width: $small-screen) {
-      height: 100vh;
-    }
     .about__me {
       width: 100%;
       aspect-ratio: 1/1;
