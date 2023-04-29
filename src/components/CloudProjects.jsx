@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Pagination, Navigation } from "swiper";
+import { db } from "./../firebase/config";
+import { collection, onSnapshot, getDocs } from "firebase/firestore";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,10 +10,27 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 
 const CloudProjects = () => {
+  const [cloudProjects, setCloudProjects] = useState([]);
+
+  useEffect(() => {
+    const getCloudProjects = async () => {
+      const querySnapshot = await getDocs(collection(db, "cloudProjects"));
+      setCloudProjects(querySnapshot.docs.map((project) => project.data()));
+    };
+
+    const unsubscribe = onSnapshot(collection(db, "cloudProjects"), () => {
+      getCloudProjects();
+    });
+
+    return () => {
+      unsubscribe;
+    };
+  }, []);
+
   return (
     <section id="cloud-projects" className="cloud__projects">
       <h5>My projects in the cloud</h5>
-      <h3>See that brands</h3>
+      <h3>See some deploys</h3>
 
       <Swiper
         className="container cloud__projects__container"
@@ -22,30 +41,17 @@ const CloudProjects = () => {
         loop
         pagination={{ clickable: true }}
       >
-        <SwiperSlide className="cloud__project">
-          <div className="cloud__project__logo">
-            <img src="" alt="" />
-          </div>
-          <h5 className="cloud__project__name">Lorem ipsum</h5>
-          <small className="cloud__project__detail">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut vero
-            quo dolorum a autem eos rerum corporis? Magni nostrum obcaecati,
-            impedit dignissimos nobis libero error necessitatibus cupiditate
-            vitae quos excepturi!
-          </small>
-        </SwiperSlide>
-        <SwiperSlide className="cloud__project">
-          <div className="cloud__project__logo">
-            <img src="" alt="" />
-          </div>
-          <h5 className="cloud__project__name">Lorem ipsum</h5>
-          <small className="cloud__project__detail">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut vero
-            quo dolorum a autem eos rerum corporis? Magni nostrum obcaecati,
-            impedit dignissimos nobis libero error necessitatibus cupiditate
-            vitae quos excepturi!
-          </small>
-        </SwiperSlide>
+        {cloudProjects.map((cloudProject) => (
+          <SwiperSlide className="cloud__project">
+            <div className="cloud__project__logo">
+              <img src={cloudProject.logo} alt={cloudProject.title} />
+            </div>
+            <h5 className="cloud__project__name">{cloudProject.title}</h5>
+            <small className="cloud__project__detail">
+            {cloudProject.description}
+            </small>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "./../firebase/config";
-import { collection, query, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, onSnapshot, getDocs } from "firebase/firestore";
 import Project from "./Project";
 
 const Projects = () => {
