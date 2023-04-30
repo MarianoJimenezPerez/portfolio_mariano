@@ -24,7 +24,7 @@ const Hero = () => {
   }, [])
   
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <div className="container hero__container">
         <h5>Hello I'm</h5>
         <h1>Mariano Jiménez Pérez</h1>

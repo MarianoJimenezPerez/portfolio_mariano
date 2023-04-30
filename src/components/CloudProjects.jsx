@@ -41,8 +41,8 @@ const CloudProjects = () => {
         loop
         pagination={{ clickable: true }}
       >
-        {cloudProjects.map((cloudProject) => (
-          <SwiperSlide className="cloud__project">
+        {cloudProjects.map((cloudProject, index) => (
+          <SwiperSlide className="cloud__project" key={index}>
             <div className="cloud__project__logo">
               <img src={cloudProject.logo} alt={cloudProject.title} />
             </div>
