@@ -10,6 +10,7 @@
     }
     @media screen and (max-width: $small-screen) {
       gap: 1rem;
+      transform: rotate(0deg);
     }
     .skills__frontend,
     .skills__backend {
