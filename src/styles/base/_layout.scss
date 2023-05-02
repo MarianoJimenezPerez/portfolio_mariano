@@ -102,6 +102,18 @@ body {
     color: $color-bg;
   }
 
+  .btn__disabled{
+    background: #b5b5b5;
+    border: #b5b5b5;
+    cursor: not-allowed;
+    color: $color-bg;
+  }
+  .btn__disabled:hover{
+    background: #b5b5b5;
+    border: #b5b5b5;
+    color: $color-bg;
+  }
+
   img {
     display: block;
     width: 100%;
