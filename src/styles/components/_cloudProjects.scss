@@ -5,6 +5,9 @@
     @media screen and (max-width: $small-screen) {
       width: $container-width-sm;
     }
+    .swiper-wrapper{
+      align-items: center;
+    }
     .cloud__project {
       background-color: transparent;
       text-align: center;

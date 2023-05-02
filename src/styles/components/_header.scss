@@ -28,6 +28,10 @@
         background-color: $color-primary;
         color: $color-black;
     }
+    .active:hover{
+        background-color: $color-primary;
+        color: $color-black;
+    }
     a:hover{
         background: rgba(0,0,0,0.3);
         color: $color-white;
