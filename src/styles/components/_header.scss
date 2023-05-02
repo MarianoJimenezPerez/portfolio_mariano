@@ -13,6 +13,9 @@
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    @media screen and (max-width: $small-screen) {
+        gap: 0.4rem;
+    }
     a{
         background: transparent;
         padding: 0.9rem;

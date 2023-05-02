@@ -1,10 +1,7 @@
 @import "./../base/variables";
 .cloud__projects {
   .cloud__projects__container {
-    width: 40%;
-    @media screen and (max-width: $medium-screen) {
-      width: 60%;
-    }
+    width: 60%;
     @media screen and (max-width: $small-screen) {
       width: $container-width-sm;
     }
@@ -14,6 +11,9 @@
       padding: 2rem;
       border-radius: 2rem;
       user-select: none;
+      h5{
+        color: $color-white;
+      }
       .cloud__project__logo {
         width: 8rem;
         aspect-ratio: 1/1;
