@@ -1,95 +1,110 @@
 @import "./variables";
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 
-body{
-    font-family: $font-family;
-    background-color: $color-bg;
+body {
+  font-family: $font-family;
+  background-color: $color-bg;
+  color: $color-primary;
+  line-height: 1.7;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  background-size: 4px 4px;
+
+  ::selection {
+    background-color: $color-highlight;
+    color: $color-white;
+  }
+
+  .container {
+    width: $container-width-lg;
+    margin: 0 auto;
+    @media screen and (max-width: $medium-screen) {
+      width: $container-width-md;
+    }
+    @media screen and (max-width: $small-screen) {
+      width: $container-width-sm;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  section {
+    margin-top: 8rem;
+    @media screen and (max-width: $medium-screen) {
+      margin-top: 6rem;
+    }
+    @media screen and (max-width: $small-screen) {
+      margin-bottom: 2rem;
+    }
+    h3,
+    h5 {
+      text-align: center;
+      color: $color-secondary;
+    }
+    h3 {
+      color: $color-primary;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .text__secondary {
+    color: $color-secondary;
+  }
+
+  a {
     color: $color-primary;
-    line-height: 1.7;
-    background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 6px);
-    background-size: 4px 4px;
+    transition: $transition;
+    text-decoration: none;
+  }
 
-    .container{
-        width: $container-width-lg;
-        margin: 0 auto;
-        @media screen and (max-width: $medium-screen) {
-            width: $container-width-md;
-        }
-        @media screen and (max-width: $small-screen) {
-            width: $container-width-sm;
-        }
-    }
-    h1,h2,h3,h4,h5{
-        font-weight: 500;
-    }
-    h1{
-        font-size: 2.5rem;
-    }
-    section{
-        margin-top: 8rem;
-        @media screen and (max-width: $medium-screen) {
-            margin-top: 6rem;
-        }
-        @media screen and (max-width: $small-screen) {
-            margin-bottom: 2rem;
-        }
-        h3, h5{
-            text-align: center;
-            color: $color-secondary;
-        }
-        h3{
-            color: $color-primary;
-            margin-bottom: 3rem;
-        }
-    }
+  a:hover {
+    color: $color-white;
+  }
 
-    .text__secondary{
-        color: $color-secondary;
-    }
+  .btn {
+    width: max-content;
+    display: inline-block;
+    color: $color-primary;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    transition: $transition;
+  }
 
-    a{
-        color: $color-primary;
-        transition: $transition;
-        text-decoration: none;
-    }
+  .btn:hover {
+    background-color: $color-white;
+    color: $color-bg;
+    border-color: transparent;
+  }
 
-    a:hover{
-        color: $color-white;
-    }
+  .btn__primary {
+    background-color: $color-primary;
+    color: $color-bg;
+  }
 
-    .btn{
-        width: max-content;
-        display: inline-block;
-        color: $color-primary;
-        padding: 0.75rem 1.2rem;
-        border-radius: 0.4rem;
-        cursor: pointer;
-        border: 1px solid $color-primary;
-        transition: $transition;
-    }
-
-    .btn:hover{
-        background-color: $color-white;
-        color: $color-bg;
-        border-color: transparent;
-    }
-
-    .btn__primary{
-        background-color: $color-primary;
-        color: $color-bg;
-    }
-
-    img{
-        display: block;
-        width: 100%;
-        object-fit: cover;
-    }
-
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
 }

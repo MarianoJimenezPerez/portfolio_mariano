@@ -1,5 +1,5 @@
-import React, {useRef, useEffect} from "react";
-import Typed from 'typed.js';
+import React, { useRef, useEffect } from "react";
+import Typed from "typed.js";
 
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
@@ -12,17 +12,22 @@ const Hero = () => {
   const el = React.useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['<h5 style="display:inline;">Front end developer</h5>', '<h5 style="display:inline;">Great person</h5>'],
+      strings: [
+        '<h5 style="display:inline;">Front end developer</h5>',
+        '<h5 style="display:inline;">Agile person</h5>',
+        '<h5 style="display:inline;">Technical project manager</h5>',
+        '<h5 style="display:inline;">Nature lover</h5>',
+      ],
       typeSpeed: 70,
       backSpeed: 30,
-      loop: true
+      loop: true,
     });
-  
+
     return () => {
       typed.destroy();
-    }
-  }, [])
-  
+    };
+  }, []);
+
   return (
     <div className="hero" id="home">
       <div className="container hero__container">
@@ -50,7 +55,7 @@ const Hero = () => {
           <a href="https://github.com/MarianoJimenezPerez" target="_blank">
             <FaGithub />
           </a>
-          <a href="mailto:marianojimenezperez1@gmail.com" >
+          <a href="mailto:marianojimenezperez1@gmail.com">
             <AiOutlineMail />
           </a>
         </div>

@@ -1,12 +1,13 @@
 import React from "react";
+import { FaFacebookF, FiInstagram, AiOutlineWhatsApp } from "react-icons/all";
 
 const Footer = () => {
-  const date = new Date;
+  const date = new Date();
 
   return (
     <footer className="footer">
       <a href="#" className="footer__logo">
-        MARIANO
+        ME
       </a>
 
       <ul className="permalinks">
@@ -31,13 +32,21 @@ const Footer = () => {
       </ul>
 
       <div className="footer__social">
-        <a href="#">F</a>
-        <a href="#">I</a>
-        <a href="#">W</a>
+        <a href="https://www.facebook.com/mariano.jimenezperez.3/" target="_blank">
+          <FaFacebookF />
+        </a>
+        <a href="https://www.instagram.com/mariaanojp/" target="_blank">
+          <FiInstagram />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5493513181399" target="_blank">
+          <AiOutlineWhatsApp />
+        </a>
       </div>
 
       <div className="footer__copyright">
-        <small>&copy;{date.getFullYear()} Mariano Jiménez Pérez. All rights reserved</small>
+        <small>
+          &copy;{date.getFullYear()} Mariano Jiménez Pérez. All rights reserved
+        </small>
       </div>
     </footer>
   );

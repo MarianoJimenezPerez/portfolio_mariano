@@ -49,6 +49,7 @@ const CloudProjects = () => {
             <h5 className="cloud__project__name">{cloudProject.title}</h5>
             <small className="cloud__project__detail">
             {cloudProject.description}
+            <span><a href={cloudProject.websiteURL} target="_blank"> See more...</a></span>
             </small>
           </SwiperSlide>
         ))}

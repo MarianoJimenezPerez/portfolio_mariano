@@ -16,6 +16,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
+      color: $color-white;
       .contact__option {
         background-color: transparent;
         padding: 1.2rem;
@@ -30,6 +31,7 @@
           margin-top: 0.7rem;
           display: inline-block;
           font-size: 0.8rem;
+          color: $color-secondary;
         }
       }
       .contact__option:hover {
@@ -54,6 +56,9 @@
         border: 2px solid $color-primary;
         resize: none;
         color: $color-white;
+      }
+      .contact__advice{
+        transition: $transition;
       }
       button {
         align-self: flex-end;

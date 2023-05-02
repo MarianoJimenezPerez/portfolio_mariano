@@ -15,12 +15,14 @@
       border-radius: 2rem;
       user-select: none;
       .cloud__project__logo {
-        width: 4rem;
+        width: 8rem;
         aspect-ratio: 1/1;
         overflow: hidden;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        border: 0.4rem solid $color-secondary;
+        margin: 0 auto;
+        display: flex;
+        img {
+          object-fit: contain;
+        }
       }
       .cloud__project__detail {
         color: $color-white;
@@ -28,6 +30,9 @@
         display: block;
         width: 80%;
         margin: 0.8rem auto 0;
+        a {
+          color: $color-secondary;
+        }
         @media screen and (max-width: $small-screen) {
           width: $container-width-sm;
         }

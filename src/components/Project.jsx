@@ -8,10 +8,10 @@ const Project = ({ project }) => {
       </div>
       <h3>{project.title}</h3>
       <div className="portfolio__item__cta">
-        <a href={project.githubLink} className="btn" target="_blank">
+        <a href={project.githubLink|| "#"} className="btn" target="_blank">
           Github
         </a>
-        <a href={project.demoLink} className="btn btn__primary" target="_blank">
+        <a href={project.demoLink || "#"} className="btn btn__primary" target="_blank">
           Live Demo
         </a>
       </div>
